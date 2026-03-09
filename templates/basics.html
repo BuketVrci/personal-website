@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Köpük Naz Slideshow</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body class = "basics">
+
+    <div class="slider-card">
+        <div class="slide-container">
+            <img src="https://lh3.googleusercontent.com/u/0/d/1iCUOhGi8EeMbw8PcIC7dpDXJ3EvTbEMn" class="active" alt="First">
+            <img src="https://lh3.googleusercontent.com/u/0/d/1dkrcjFzl4n5yGZr_-NYhTZ-JTRJ4ppWm" alt="Image 2">
+            <img src="https://lh3.googleusercontent.com/u/0/d/1DrCZVVtLJ2hUDLgZ-fbBhHxrb1f_XtX7" alt="Image 3">
+        </div>
+
+        <div class="content-area">
+            <h1 id="slide-title">Basics</h1>
+            <p id="slide-desc" class="description">köpük Naz born in 2013 on July 15th. Came to our house when he was 3 months old.</p>
+            
+            <div class="controls">
+                <button class="btn" onclick="changeSlide(-1)">Prev</button>
+                <button class="btn" onclick="changeSlide(1)">Next</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let currentIdx = 0;
+        const slides = document.querySelectorAll('.slide-container img');
+        const title = document.getElementById('slide-title');
+        const desc = document.getElementById('slide-desc');
+
+        // Data for descriptions
+        const content = [
+            { title: "Basics", text: "Greatest Sir Köpük Naz - Initial Phase" },
+            { title: "Intermediate", text: "The growth and development of the Legend." },
+            { title: "Advanced", text: "Mastery of the Köpük Naz technique." }
+        ];
+
+        function changeSlide(direction) {
+            // Remove active class from current
+            slides[currentIdx].classList.remove('active');
+            
+            // Calculate next index
+            currentIdx = (currentIdx + direction + slides.length) % slides.length;
+            
+            // Add active class and update text
+            slides[currentIdx].classList.add('active');
+            title.innerText = content[currentIdx].title;
+            desc.innerText = content[currentIdx].text;
+        }
+    </script>
+
+</body>
+</html>

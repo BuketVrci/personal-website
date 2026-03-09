@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #37a976;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    background-color: white;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 400px;
+}
+
+.subscription-section {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 2px solid #a50249;
+}
+
+.subscription-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.subscription-form input[type="email"] {
+    padding: 10px;
+    width: 80%;
+    border: 2px solid #c903ab;
+    border-radius: 8px;
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 10px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.subscription-form input[type="email"]:focus {
+    border-color: #a50249;
+}
+
+.subscription-form .btn {
+    width: 85%;
+    margin-top: 0;
+    padding: 10px;
+    font-size: 14px;
+}
+
+.subscription-form-paragraph {
+    font-size: 14px;
+    margin-bottom: 10px;
+    color: #37a976;
+}
+
+.startpage h1 {
+    color: #c903ab;
+    margin-top: 0;
+    font-size: 28px;
+}
+.basics h1 {
+     color: #c903ab;
+     margin: 10px 0;
+     font-size: 24px;
+}
+
+p {
+    color: #37a976;
+    line-height: 1.6;
+}
+
+.startpage .btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 12px 24px;
+    background-color: #c903ab;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: background-color 1s ease;
+    transition: border-radius 1s ease;
+}
+
+.startpage .btn:hover {
+    background-color: #a50249;
+    border-radius: 100px;
+}
+
+.basics .btn {
+            cursor: pointer;
+            padding: 10px 20px;
+            background-color: #c903ab;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            font-family: 'Poppins', sans-serif;
+            transition: all 0.4s ease;
+}
+
+.basics .btn:hover {
+    background-color: #a50249;
+    border-radius: 100px;
+}
+
+/* Style for the basics.html*/
+.slider-card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    max-width: 450px;
+    width: 90%;
+}
+
+/* Image Area */
+.slide-container {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    border-radius: 8px;
+    background-color: #f0f0f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slide-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Ensures images fill the space nicely */
+    display: none;
+    /* Hidden by default */
+}
+
+.slide-container img.active {
+    display: block;
+    animation: fadeIn 0.5s ease;
+}
+
+/* Description Area at the Bottom */
+.content-area {
+    margin-top: 20px;
+}
+.description {
+    color: #37a976;
+    min-height: 50px;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+/* Navigation Buttons */
+.controls {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
